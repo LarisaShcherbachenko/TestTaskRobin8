@@ -1,6 +1,6 @@
 # Test task
 
-Make benchmark of AES 256 with key lenght 32 bytes.
+Make benchmark of AES 256 with key lenght 32 bytes. Cipher Block Chaining (CBC) mode was used.
 
 ## Installation
 - Clone.  git clone https://github.com/LarisaShcherbachenko/TestTaskRobin8.git
@@ -93,4 +93,4 @@ Size (Mb)      Enc time (sec) Dec time (sec)
 Program is executed in 371.06544947624207 seconds.
 ```
 
-![alt text](TestTaskRobin8/benchmark_res.png)
+![alt text](benchmark_res.png)
