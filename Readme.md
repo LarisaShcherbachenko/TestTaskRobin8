@@ -5,13 +5,13 @@ Benchmark of AES 256 with key lenght 32 bytes. Cipher Block Chaining (CBC) mode 
 Pycrypto library was used. 
 
 ## Installation
-- Clone.
+- Clone sources from git:
 
 ```bash
 git clone https://github.com/LarisaShcherbachenko/TestTaskRobin8.git
 ```
 
-- Create virtualenv
+- Create virtualenv and install needed libraries from the requirements.txt:
 
 ```bash
 cd TestTaskRobin8
@@ -20,7 +20,8 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-- For instaling pycrypto library manually download it from https://pypi.python.org/pypi/pycrypto, extract and execute next commands:
+- For instaling pycrypto library manually download it from https://pypi.python.org/pypi/pycrypto (or use pycrypto-2.6.1.tar.gz).
+Then extract it and execute next commands:
 
 ```bash
 cd pycrypto-2.6.1/
@@ -30,13 +31,15 @@ python setup.py install
 
 ## Run
 
-Run script from the 'TestTaskRobin8' directory:
+Go to the 'TestTaskRobin8' directory.
+
+For running application use next command:
 
 ```bash
 python3 'main.py'
 ```
 
-For running tests execute next command from the 'TestTaskRobin8' directory:
+For running tests execute next command:
 
 ```bash
 python3 'test.py'
@@ -56,7 +59,9 @@ python3 'test.py'
     - `requirements.txt` --- contain set of needed libraries
     - `pycrypto-2.6.1.tar.gz` --- cryptography library
 
-Example of result:
+## Results
+
+Example of command line output:
 
 ```bash
 Init directories
@@ -96,5 +101,7 @@ Size (Mb)      Enc time (sec) Dec time (sec)
 Benchmark results were written to the /home/larysa/PythonProjects/TestTaskRobin8/benchmark_res.csv.
 Program is executed in 371.06544947624207 seconds.
 ```
+
+Appropriate visualization:
 
 ![alt text](benchmark_res.png)
