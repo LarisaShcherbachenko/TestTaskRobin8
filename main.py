@@ -119,7 +119,7 @@ def decrypt_file(key, in_filename, out_filename=None, chunksize=24*1024):
 
 def save_to_csv(benchmark_res):
     with open(BASE_DIR + '/benchmark_res.csv', 'w') as f:
-        print(f.name)
+        print("Benchmark results were written to the {}.".format(f.name))
         writer = csv.writer(f)
         writer.writerows(benchmark_res)
 

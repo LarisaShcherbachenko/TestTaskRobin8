@@ -1,14 +1,22 @@
 # Test task
 
-Make benchmark of AES 256 with key lenght 32 bytes. Cipher Block Chaining (CBC) mode was used. 
+Benchmark of AES 256 with key lenght 32 bytes. Cipher Block Chaining (CBC) mode was used. Chunksize is 64 kb.
+
+Pycrypto library was used. 
 
 ## Installation
-- Clone.  git clone https://github.com/LarisaShcherbachenko/TestTaskRobin8.git
+- Clone.
+
+```bash
+git clone https://github.com/LarisaShcherbachenko/TestTaskRobin8.git
+```
 
 - Create virtualenv
 
 ```bash
+cd TestTaskRobin8
 virtualenv --python=python3.6 venv
+source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
@@ -19,6 +27,8 @@ cd pycrypto-2.6.1/
 python setup.py build
 python setup.py install
 ```
+
+## Run
 
 Run script from the 'TestTaskRobin8' directory:
 
@@ -32,7 +42,7 @@ For running tests execute next command from the 'TestTaskRobin8' directory:
 python3 'test.py'
 ```
 
-### Software structure description
+## Software structure description
 
 - `TestTaskRobin8`
     - `main` --- main module
@@ -83,7 +93,7 @@ Size (Mb)      Enc time (sec) Dec time (sec)
 280.0          9.896256       3.569788       
 290.0          9.992903       5.160242       
 300.0          10.803707      4.354974       
-/home/larysa/PythonProjects/TestTaskRobin8/benchmark_res.csv
+Benchmark results were written to the /home/larysa/PythonProjects/TestTaskRobin8/benchmark_res.csv.
 Program is executed in 371.06544947624207 seconds.
 ```
 
