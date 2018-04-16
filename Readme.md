@@ -12,18 +12,12 @@ virtualenv --python=python3.6 venv
 pip3 install -r requirements.txt
 ```
 
-- For instaling pycrypto download library from https://pypi.python.org/pypi/pycrypto, extract and execute next commands:
+- For instaling pycrypto library manually download it from https://pypi.python.org/pypi/pycrypto, extract and execute next commands:
 
 ```bash
 cd pycrypto-2.6.1/
 python setup.py build
 python setup.py install
-```
-
-- Install Matplotlib:
-
-```bash
-sudo apt-get install python3-matplotlib
 ```
 
 Run script from the 'TestTaskRobin8' directory:

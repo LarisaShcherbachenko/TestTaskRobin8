@@ -12,17 +12,18 @@ from Crypto.Cipher import AES
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 
-PLAIN_FILES_PATH = os.path.dirname(__file__) + '/files/plain/'
-ENC_FILES_PATH = os.path.dirname(__file__) + '/files/enc/'
-DEC_FILES_PATH = os.path.dirname(__file__) + '/files/dec/'
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
+PLAIN_FILES_PATH = BASE_DIR + '/files/plain/'
+ENC_FILES_PATH = BASE_DIR + '/files/enc/'
+DEC_FILES_PATH = BASE_DIR + '/files/dec/'
 
 def init_directories():
     shutil.rmtree(PLAIN_FILES_PATH)
     shutil.rmtree(ENC_FILES_PATH)
     shutil.rmtree(DEC_FILES_PATH)
 
-    if not os.path.exists(os.path.dirname(__file__) + '/files/'):
-        os.makedirs(os.path.dirname(__file__) + '/files/')
+    if not os.path.exists(BASE_DIR + '/files/'):
+        os.makedirs(BASE_DIR + '/files/')
     if not os.path.exists(PLAIN_FILES_PATH):
         os.makedirs(PLAIN_FILES_PATH)
     if not os.path.exists(ENC_FILES_PATH):
@@ -117,7 +118,7 @@ def decrypt_file(key, in_filename, out_filename=None, chunksize=24*1024):
             outfile.truncate(origsize)
 
 def save_to_csv(benchmark_res):
-    with open(os.path.dirname(__file__) + '/benchmark_res.csv', 'w') as f:
+    with open(BASE_DIR + '/benchmark_res.csv', 'w') as f:
         print(f.name)
         writer = csv.writer(f)
         writer.writerows(benchmark_res)
@@ -173,9 +174,9 @@ def main():
         benchmark_res.append((filesize, enc_time, dec_time))
         print(tmpl % (filesize, enc_time, dec_time))
 
-    save_to_csv(benchmark_res)
-
     plot_benchmark_res(benchmark_res)
+
+    save_to_csv(benchmark_res)
 
     print('Program is executed in {} seconds.'.format(time.time() - start_time_app))
 
