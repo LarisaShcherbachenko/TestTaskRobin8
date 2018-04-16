@@ -93,4 +93,4 @@ Size (Mb)      Enc time (sec) Dec time (sec)
 Program is executed in 371.06544947624207 seconds.
 ```
 
-![alt text](https://github.com/LarisaShcherbachenko/TestTaskRobin8/benchmark_res.png)
+![alt text](TestTaskRobin8/benchmark_res.png)
