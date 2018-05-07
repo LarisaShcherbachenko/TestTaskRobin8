@@ -1,6 +1,6 @@
 # Test task
-
 [![Build Status](https://travis-ci.org/LarisaShcherbachenko/TestTaskRobin8.svg?branch=master)](https://travis-ci.org/LarisaShcherbachenko/TestTaskRobin8/)
+[![Coverage Status](https://coveralls.io/repos/github/LarisaShcherbachenko/TestTaskRobin8/badge.svg?branch=master)](https://coveralls.io/github/LarisaShcherbachenko/TestTaskRobin8?branch=master)
 
 Benchmark of AES 256 with key lenght 32 bytes. Cipher Block Chaining (CBC) mode was used. Chunksize is 64 kb.
 
