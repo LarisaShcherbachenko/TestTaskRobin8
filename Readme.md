@@ -1,7 +1,6 @@
 # Test task
-[![Build Status](https://travis-ci.org/AugurProject/augur.svg?branch=master)](https://travis-ci.org/LarisaShcherbachenko/TestTaskRobin8/)
 
-[![Build Status]](https://travis-ci.org/LarisaShcherbachenko/TestTaskRobin8/)
+[![Build Status](https://travis-ci.org/AugurProject/augur.svg?branch=master)](https://travis-ci.org/LarisaShcherbachenko/TestTaskRobin8/)
 
 Benchmark of AES 256 with key lenght 32 bytes. Cipher Block Chaining (CBC) mode was used. Chunksize is 64 kb.
 
