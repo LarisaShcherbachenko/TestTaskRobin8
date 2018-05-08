@@ -146,7 +146,7 @@ def main():
     print('Init directories')
     init_directories()
     print('Start files generation')
-    generate_files([x * 10 for x in range(1, 31)])
+    generate_files([x * 10 for x in range(1, 3)])
 
     print('Start benchmark')
 
