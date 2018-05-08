@@ -107,3 +107,21 @@ Program is executed in 371.06544947624207 seconds.
 Appropriate visualization:
 
 ![alt text](benchmark_res.png)
+
+## Errors and solutions
+
+### fatal error: Python.h: No such file or directory
+
+Looks like you haven't properly installed the header files and static libraries for python dev. Use your package manager to install them system-wide.
+
+```bash
+sudo apt-get install python-dev   # for python2.x installs
+sudo apt-get install python3-dev  # for python3.x installs
+```
+
+### ImportError: No module named '_ tkinter', please install the python3-tk package
+
+```bash
+sudo apt-get install python3-tk Installs tkinter for Python3.x.x
+```
+
