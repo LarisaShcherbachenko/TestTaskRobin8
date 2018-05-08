@@ -10,7 +10,14 @@ import struct
 import time
 from Crypto.Cipher import AES
 import matplotlib.patches as mpatches
+import matplotlib as mpl
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using non-interactive Agg backend')
+    mpl.use('Agg')
 import matplotlib.pyplot as plt
+
+# Size will start from 10 mb with step 10 mb
+NUMBER_OF_GENERATED_FILES = 3
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 PLAIN_FILES_PATH = BASE_DIR + '/files/plain/'
@@ -146,7 +153,7 @@ def main():
     print('Init directories')
     init_directories()
     print('Start files generation')
-    generate_files([x * 10 for x in range(1, 3)])
+    generate_files([x * 10 for x in range(1, NUMBER_OF_GENERATED_FILES + 1)])
 
     print('Start benchmark')
 
